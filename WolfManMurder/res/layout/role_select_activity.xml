@@ -3,5 +3,245 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_medium"
+            android:text="@string/game_man_num"
+            android:textSize="@dimen/text_size_larger"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/reduceTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:background="@android:drawable/btn_default"
+            android:gravity="center"
+            android:padding="@dimen/margin_medium"
+            android:text="  -  "
+            android:textSize="@dimen/text_size_larger"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/numTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_medium"
+            android:text="8"
+            android:textSize="@dimen/text_size_larger"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/addTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/btn_default"
+            android:gravity="center"
+            android:padding="@dimen/margin_medium"
+            android:text="  +  "
+            android:textSize="@dimen/text_size_larger"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_medium"
+            android:text="先知："
+            android:textSize="@dimen/text_size_medium"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_medium"
+            android:text="1"
+            android:textSize="@dimen/text_size_larger"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_medium"
+            android:text="丘比特："
+            android:textSize="@dimen/text_size_medium"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_medium"
+            android:text="1"
+            android:textSize="@dimen/text_size_larger"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_medium"
+            android:text="女巫："
+            android:textSize="@dimen/text_size_medium"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_medium"
+            android:text="1"
+            android:textSize="@dimen/text_size_larger"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_medium"
+            android:text="狼人："
+            android:textSize="@dimen/text_size_medium"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/reduceWolfTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:background="@android:drawable/btn_default"
+            android:gravity="center"
+            android:padding="@dimen/margin_medium"
+            android:text="  -  "
+            android:textSize="@dimen/text_size_larger"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/numWolfTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_medium"
+            android:text="2"
+            android:textSize="@dimen/text_size_larger"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/addWolfTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/btn_default"
+            android:gravity="center"
+            android:padding="@dimen/margin_medium"
+            android:text="  +  "
+            android:textSize="@dimen/text_size_larger"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_medium"
+            android:text="水民："
+            android:textSize="@dimen/text_size_medium"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/reduceManTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:background="@android:drawable/btn_default"
+            android:gravity="center"
+            android:padding="@dimen/margin_medium"
+            android:text="  -  "
+            android:textSize="@dimen/text_size_larger"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/numManTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_medium"
+            android:text="3"
+            android:textSize="@dimen/text_size_larger"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/addManTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/btn_default"
+            android:gravity="center"
+            android:padding="@dimen/margin_medium"
+            android:text="  +  "
+            android:textSize="@dimen/text_size_larger"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_medium"
+            android:text="猎人："
+            android:textSize="@dimen/text_size_medium"
+            android:textStyle="bold" />
+        <CheckBox
+            android:id="@+id/hunterCB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/hunterTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_medium"
+            android:text="1"
+            android:textSize="@dimen/text_size_larger"
+            android:textStyle="bold"
+            android:visibility="invisible" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_medium"
+            android:text="守卫："
+            android:textSize="@dimen/text_size_medium"
+            android:textStyle="bold" />
+        <CheckBox
+            android:id="@+id/protectCB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/protectTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_medium"
+            android:text="1"
+            android:textSize="@dimen/text_size_larger"
+            android:textStyle="bold"
+            android:visibility="invisible" />
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <Button
+            android:id="@+id/startBTN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:text="开始游戏" />
+    </RelativeLayout>
 </LinearLayout>
