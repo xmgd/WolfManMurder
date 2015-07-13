@@ -11,6 +11,8 @@ public class GameNum implements Serializable {
 
     public static final String GAME_NUM = "game_num";
 
+    public static final String GAME_RESTART = "game_restart";
+
     private int totalNum;
 
     private int wolfNum;

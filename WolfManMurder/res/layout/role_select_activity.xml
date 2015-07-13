@@ -6,6 +6,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
         android:orientation="horizontal" >
         <TextView
             android:layout_width="wrap_content"
@@ -46,70 +47,20 @@
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/margin_medium"
-            android:text="先知："
-            android:textSize="@dimen/text_size_medium"
-            android:textStyle="bold" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/margin_medium"
-            android:text="1"
-            android:textSize="@dimen/text_size_larger"
-            android:textStyle="bold" />
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:background="@android:color/black" >
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
         android:orientation="horizontal" >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="@dimen/margin_medium"
-            android:text="丘比特："
-            android:textSize="@dimen/text_size_medium"
-            android:textStyle="bold" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/margin_medium"
-            android:text="1"
-            android:textSize="@dimen/text_size_larger"
-            android:textStyle="bold" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/margin_medium"
-            android:text="女巫："
-            android:textSize="@dimen/text_size_medium"
-            android:textStyle="bold" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/margin_medium"
-            android:text="1"
-            android:textSize="@dimen/text_size_larger"
-            android:textStyle="bold" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/margin_medium"
-            android:text="狼人："
+            android:text="@string/wolf"
             android:textSize="@dimen/text_size_medium"
             android:textStyle="bold" />
         <TextView
@@ -150,7 +101,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="@dimen/margin_medium"
-            android:text="水民："
+            android:text="@string/man"
             android:textSize="@dimen/text_size_medium"
             android:textStyle="bold" />
         <TextView
@@ -191,22 +142,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="@dimen/margin_medium"
-            android:text="猎人："
+            android:text="@string/seer"
             android:textSize="@dimen/text_size_medium"
             android:textStyle="bold" />
-        <CheckBox
-            android:id="@+id/hunterCB"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
         <TextView
-            android:id="@+id/hunterTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="@dimen/margin_medium"
             android:text="1"
             android:textSize="@dimen/text_size_larger"
-            android:textStyle="bold"
-            android:visibility="invisible" />
+            android:textStyle="bold" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -216,13 +161,72 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="@dimen/margin_medium"
-            android:text="守卫："
+            android:text="@string/lover"
             android:textSize="@dimen/text_size_medium"
             android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_medium"
+            android:text="1"
+            android:textSize="@dimen/text_size_larger"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_medium"
+            android:text="@string/witch"
+            android:textSize="@dimen/text_size_medium"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_medium"
+            android:text="1"
+            android:textSize="@dimen/text_size_larger"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_medium"
+            android:text="@string/hunter"
+            android:textSize="@dimen/text_size_medium"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/hunterTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_medium"
+            android:text="1"
+            android:textSize="@dimen/text_size_larger"
+            android:textStyle="bold"
+            android:visibility="gone" />
         <CheckBox
-            android:id="@+id/protectCB"
+            android:id="@+id/hunterCB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_medium"
+            android:text="@string/protect"
+            android:textSize="@dimen/text_size_medium"
+            android:textStyle="bold" />
         <TextView
             android:id="@+id/protectTV"
             android:layout_width="wrap_content"
@@ -231,7 +235,11 @@
             android:text="1"
             android:textSize="@dimen/text_size_larger"
             android:textStyle="bold"
-            android:visibility="invisible" />
+            android:visibility="gone" />
+        <CheckBox
+            android:id="@+id/protectCB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </LinearLayout>
     <RelativeLayout
         android:layout_width="match_parent"
@@ -242,6 +250,9 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:gravity="center"
-            android:text="开始游戏" />
+            android:padding="@dimen/margin_larger"
+            android:text="@string/start_game"
+            android:textSize="@dimen/text_size_larger"
+            android:textStyle="bold" />
     </RelativeLayout>
 </LinearLayout>

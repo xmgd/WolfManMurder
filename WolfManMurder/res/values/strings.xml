@@ -6,4 +6,11 @@
     <string name="game_name">狼人杀</string>
     <string name="start_game">开始游戏</string>
     <string name="game_man_num">游戏人数</string>
+    <string name="wolf">狼人</string>
+    <string name="man">村民</string>
+    <string name="witch">女巫</string>
+    <string name="lover">丘比特</string>
+    <string name="protect">守卫</string>
+    <string name="seer">预言家</string>
+    <string name="hunter">猎人</string>
 </resources>

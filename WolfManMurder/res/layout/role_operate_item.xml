@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/margin_medium"
+    android:gravity="center"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+        <ImageView
+            android:id="@+id/roleIV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/margin_medium"
+            android:background="@drawable/bg_card" />
+        <TextView
+            android:id="@+id/killTV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#77000000"
+            android:gravity="center"
+            android:text="死掉啦！！！"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="@dimen/margin_larger"
+            android:textStyle="bold"
+            android:visibility="invisible" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/playerTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/margin_medium"
+        android:text="玩家1"
+        android:textSize="@dimen/text_size_larger" />
+</LinearLayout>

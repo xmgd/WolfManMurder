@@ -117,51 +117,70 @@ public class RoleSelectActivity extends Activity {
     @OnClick(R.id.reduceWolfTV)
     public void reduceWolf() {
         int num = Integer.parseInt(mNumWolfTV.getText().toString());
+        int hunter = mHunterCB.isChecked() ? 1 : 0;
+        int protect = mProtectCB.isChecked() ? 1 : 0;
         if (num <= 1) {
             return;
         }
         num -= 1;
         mNumWolfTV.setText(num + "");
+        mNumManTV.setText(Integer.parseInt(mNumTV.getText().toString()) - 3 - num - hunter
+                - protect + "");
     }
 
     @OnClick(R.id.addWolfTV)
     public void addWolf() {
+        int numTotal = Integer.parseInt(mNumTV.getText().toString());
         int num = Integer.parseInt(mNumWolfTV.getText().toString());
-        if (num >= 5) {
+        int hunter = mHunterCB.isChecked() ? 1 : 0;
+        int protect = mProtectCB.isChecked() ? 1 : 0;
+        if (num >= numTotal - hunter - protect - 4) {
             return;
         }
         num += 1;
         mNumWolfTV.setText(num + "");
+        mNumManTV.setText(numTotal - 3 - num - hunter - protect + "");
     }
 
     @OnClick(R.id.reduceManTV)
     public void reduceMan() {
         int num = Integer.parseInt(mNumManTV.getText().toString());
+        int hunter = mHunterCB.isChecked() ? 1 : 0;
+        int protect = mProtectCB.isChecked() ? 1 : 0;
         if (num <= 1) {
             return;
         }
+        if (num >= num) {
+
+        }
         num -= 1;
         mNumManTV.setText(num + "");
+        mNumWolfTV.setText(Integer.parseInt(mNumTV.getText().toString()) - 3 - num - hunter
+                - protect + "");
     }
 
     @OnClick(R.id.addManTV)
     public void addMan() {
+        int numTotal = Integer.parseInt(mNumTV.getText().toString());
         int num = Integer.parseInt(mNumManTV.getText().toString());
-        if (num >= 7) {
+        int hunter = mHunterCB.isChecked() ? 1 : 0;
+        int protect = mProtectCB.isChecked() ? 1 : 0;
+        if (num >= numTotal - hunter - protect - 4) {
             return;
         }
         num += 1;
         mNumManTV.setText(num + "");
+        mNumWolfTV.setText(numTotal - 3 - num - hunter - protect + "");
     }
 
     @OnCheckedChanged(R.id.hunterCB)
     public void hunterCheck() {
-        mHunterTV.setVisibility(mHunterCB.isChecked() ? View.VISIBLE : View.INVISIBLE);
+        mHunterTV.setVisibility(mHunterCB.isChecked() ? View.VISIBLE : View.GONE);
     }
 
     @OnCheckedChanged(R.id.protectCB)
     public void protectCheck() {
-        mProtectTV.setVisibility(mProtectCB.isChecked() ? View.VISIBLE : View.INVISIBLE);
+        mProtectTV.setVisibility(mProtectCB.isChecked() ? View.VISIBLE : View.GONE);
     }
 
     private void autoChangeNum(int num) {

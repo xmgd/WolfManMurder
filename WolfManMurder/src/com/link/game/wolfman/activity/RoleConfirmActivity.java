@@ -6,6 +6,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -16,6 +17,7 @@ import butterknife.OnClick;
 import com.link.game.wolfman.model.GameNum;
 import com.link.game.wolfman.model.GameRole;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -30,6 +32,9 @@ public class RoleConfirmActivity extends Activity {
     @InjectView(R.id.playTV)
     TextView mPlayTV;
 
+    @InjectView(R.id.nextStepTV)
+    TextView mNextStepTV;
+
     GameNum mGameNum;
 
     private boolean mHasWatched = false;
@@ -37,6 +42,8 @@ public class RoleConfirmActivity extends Activity {
     private int mCurrentPlayer = 0;
 
     private List<GameRole> mPlayerList;
+
+    private final List<GameRole> mCurrentList = new ArrayList<GameRole>();
 
     private GameRole mCurrentRole;
 
@@ -52,8 +59,13 @@ public class RoleConfirmActivity extends Activity {
     private void dealWithIntent() {
         mGameNum = new GameNum();
         Intent it = getIntent();
-        mGameNum = (GameNum) it.getSerializableExtra(GameNum.GAME_NUM);
         mPlayerList = new ArrayList<GameRole>();
+        if (it.getBooleanExtra(GameNum.GAME_RESTART, false)) {
+            mPlayerList = (List<GameRole>) it.getSerializableExtra(GameNum.GAME_NUM);
+            mGameNum.setTotalNum(mPlayerList.size());
+            return;
+        }
+        mGameNum = (GameNum) it.getSerializableExtra(GameNum.GAME_NUM);
         mPlayerList.add(GameRole.XIANZHI);
         mPlayerList.add(GameRole.QIUBITE);
         mPlayerList.add(GameRole.NVWU);
@@ -103,12 +115,14 @@ public class RoleConfirmActivity extends Activity {
     }
 
     @OnClick(R.id.nextBTN)
-    public void next() {
+    public void next(Button nextBtn) {
         if (!mHasWatched) {
             Toast.makeText(this, "请查看你的身份！", Toast.LENGTH_SHORT).show();
             return;
         }
         updateInfo();
+        nextBtn.setText(mCurrentPlayer == mGameNum.getTotalNum() ? "传给主持人" : "第二步：传给下一个玩家");
+        mNextStepTV.setText(mCurrentPlayer == mGameNum.getTotalNum() ? "第二步：传给主持人" : "第二步：传给下一个玩家");
     }
 
     private void updateInfo() {
@@ -125,10 +139,14 @@ public class RoleConfirmActivity extends Activity {
         mCurrentRole = mPlayerList.get(ran.nextInt(mPlayerList.size()));
         mRoleTV.setText(mCurrentRole.toString());
         mPlayerList.remove(mCurrentRole);
+        mCurrentList.add(mCurrentRole);
     }
 
     private void startGame() {
         Toast.makeText(this, "游戏开始", Toast.LENGTH_LONG).show();
+        Intent it = new Intent(this, RoleOperateActivity.class);
+        it.putExtra(GameNum.GAME_NUM, (Serializable) mCurrentList);
+        startActivity(it);
         finish();
     }
 
