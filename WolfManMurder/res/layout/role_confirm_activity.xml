@@ -8,21 +8,39 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:padding="@dimen/margin_larger"
+        android:padding="@dimen/margin_medium"
         android:text="玩家1"
+        android:textSize="@dimen/text_size_larger"
         android:textStyle="bold" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="@dimen/margin_medium" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="     身份："
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/roleTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="狼人"
+            android:textSize="@dimen/text_size_larger"
+            android:textStyle="bold" />
+    </RelativeLayout>
     <TextView
-        android:id="@+id/roleTV"
+        android:id="@+id/rolebgTV"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="3"
-        android:background="@android:color/black"
+        android:background="@drawable/bg_wolf"
         android:gravity="center"
-        android:padding="@dimen/margin_larger"
-        android:text="狼人"
-        android:textColor="@android:color/black"
-        android:textSize="@dimen/text_size_larger"
-        android:textStyle="bold" />
+        android:padding="@dimen/margin_larger" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
