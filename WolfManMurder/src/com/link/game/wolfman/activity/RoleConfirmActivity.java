@@ -121,7 +121,7 @@ public class RoleConfirmActivity extends Activity {
             return;
         }
         updateInfo();
-        nextBtn.setText(mCurrentPlayer == mGameNum.getTotalNum() ? "传给主持人" : "第二步：传给下一个玩家");
+        nextBtn.setText(mCurrentPlayer == mGameNum.getTotalNum() ? "传给主持人" : "传给下一个玩家");
         mNextStepTV.setText(mCurrentPlayer == mGameNum.getTotalNum() ? "第二步：传给主持人" : "第二步：传给下一个玩家");
     }
 

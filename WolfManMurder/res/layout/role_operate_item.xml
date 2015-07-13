@@ -32,7 +32,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:padding="@dimen/margin_medium"
         android:text="玩家1"
-        android:textSize="@dimen/text_size_larger" />
+        android:textSize="@dimen/text_size_medium" />
 </LinearLayout>
